@@ -25,7 +25,7 @@ class register(APIView):
 class login(APIView):
     
     def post(self,request):
-        email = request.POST.get('username')
+        email = request.POST.get('email')
         password = request.POST.get('password')
         
         user = User.objects.filter(email=email).first()
